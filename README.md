@@ -1,1 +1,1 @@
-init
+>thinkphp5.1-full
