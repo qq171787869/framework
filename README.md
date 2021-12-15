@@ -1,1 +1,1 @@
->thinkphp5.1-diy
+>thinkphp5.1-full
