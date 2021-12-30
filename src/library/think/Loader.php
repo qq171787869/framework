@@ -54,9 +54,9 @@ class Loader
             $scriptName = $_SERVER['SCRIPT_FILENAME'];
         }
         $path = realpath(dirname($scriptName));
-        if ( !is_file($path . DIRECTORY_SEPARATOR . 'think') ) {
-            $path = dirname($path);
-        }
+//         if ( !is_file($path . DIRECTORY_SEPARATOR . 'think') ) {
+//             $path = dirname($path);
+//         }
         return $path . DIRECTORY_SEPARATOR;
     }
 
