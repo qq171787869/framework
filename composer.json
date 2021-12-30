@@ -1,0 +1,25 @@
+{
+    "name": "qq171787869/framework",
+    "description": "based on thinkphp5.1",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "qq171787869",
+            "email": "171787869@qq.com",
+            "homepage": "https://www.xyg.cool/"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "files": [
+            "src/start.php"
+        ],
+        "psr-4": {
+            "think\\": "src/library/think/",
+            "traits\\": "src/library/traits/"
+        }
+    }
+}
