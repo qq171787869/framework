@@ -262,32 +262,6 @@ class Loader
         }
     }
 
-    // 注册composer自动加载
-    public static function registerComposerLoader($composerPath)
-    {
-        if ( is_file($composerPath . 'autoload_namespaces.php') ) {
-            $map = require $composerPath . 'autoload_namespaces.php';
-            foreach ( $map as $namespace => $path ) {
-                self::addPsr0($namespace, $path);
-            }
-        }
-        if ( is_file($composerPath . 'autoload_psr4.php') ) {
-            $map = require $composerPath . 'autoload_psr4.php';
-            foreach ( $map as $namespace => $path ) {
-                self::addPsr4($namespace, $path);
-            }
-        }
-        if ( is_file($composerPath . 'autoload_classmap.php') ) {
-            $classMap = require $composerPath . 'autoload_classmap.php';
-            if ( $classMap ) {
-                self::addClassMap($classMap);
-            }
-        }
-        if ( is_file($composerPath . 'autoload_files.php') ) {
-            self::$files = require $composerPath . 'autoload_files.php';
-        }
-    }
-
     // 加载composer autofile文件
     public static function loadComposerAutoloadFiles()
     {
